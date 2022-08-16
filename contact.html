@@ -32,6 +32,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script
@@ -120,7 +124,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <form id="email-contact" class="main_form">
+            <form id="email-contact" autocomplete="off" class="main_form">
               <div class="row">
                 <div class="col-md-12">
                   <input
@@ -135,7 +139,7 @@
                   <input
                     class="contactus"
                     placeholder="Email"
-                    type="type"
+                    type="email"
                     name="email"
                     required
                   />
@@ -144,7 +148,7 @@
                   <input
                     class="contactus"
                     placeholder="Phone Number"
-                    type="type"
+                    type="number"
                     name="telephone"
                     required
                   />
@@ -155,6 +159,7 @@
                     placeholder="Subject"
                     type="type"
                     Message="subject"
+                    name="subject"
                     required
                   />
                 </div>
@@ -223,27 +228,51 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
     <script type="text/javascript">
       (function () {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init("XwbDQm3Lekkjh80AQ");
+        emailjs.init("5-po7Mnecn4hz6Ibi");
       })();
     </script>
 
-<script type="text/javascript">
-  window.onload = function() {
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-          event.preventDefault();
-          // these IDs from the previous steps
-          emailjs.sendForm('contact_service', 'contact_form', this)
-              .then(function() {
-
-              }, function(error) {
-                  console.log('FAILED...', error);
-              });
-      });
-  }
-</script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("email-contact")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            this.reset();
+            emailjs.sendForm("service_3xo9qgf", "template_qdfcsei", this).then(
+              function () {
+                toastr.options = {
+                  closeButton: true,
+                  debug: false,
+                  newestOnTop: false,
+                  progressBar: true,
+                  positionClass: "toast-bottom-left",
+                  preventDuplicates: false,
+                  onclick: null,
+                  showDuration: "300",
+                  hideDuration: "1000",
+                  timeOut: "5000",
+                  extendedTimeOut: "1000",
+                  showEasing: "swing",
+                  hideEasing: "linear",
+                  showMethod: "fadeIn",
+                  hideMethod: "fadeOut",
+                };
+                toastr["success"]("Message Sent, we will contact you soon");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
