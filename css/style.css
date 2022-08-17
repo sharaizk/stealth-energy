@@ -441,10 +441,10 @@ button {
   margin-right: 10px;
 }
 
-.text-li-heading{
+.text-li-heading {
   font-size: 1rem;
   background-color: transparent;
-  color: #E4B701;
+  color: #e4b701;
   width: 100%;
   text-align: center;
   display: inline-block;
@@ -791,7 +791,7 @@ button {
   background: inherit;
 }
 
-.contact::before {
+/* .contact::before {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -802,7 +802,7 @@ button {
   width: 100%;
   height: 100%;
   background-size: 100% 100%;
-}
+} */
 
 .contact .titlepage {
   text-align: left;
@@ -823,7 +823,7 @@ button {
   width: 100%;
   height: 47px;
   background: transparent;
-  color: #dfdfdf;
+  color: #424242;
   font-size: 18px;
   font-weight: normal;
   border-right: inherit;
@@ -843,7 +843,6 @@ button {
   border-right: inherit;
   border-left: inherit;
   border-top: inherit;
-  margin-top: 60px;
 }
 
 .main_form .send_btn {
@@ -1082,8 +1081,7 @@ ul.link_menu li a:hover {
 }
 
 .contact_page .contact {
-  padding-top: 160px;
-  margin-top: 90px;
+  padding-top: 100px;
 }
 
 .service_page .services {
@@ -1152,25 +1150,25 @@ ul.link_menu li a:hover {
   font-size: 0.8rem !important;
 }
 
-.background-blob{
+.background-blob {
   height: 100%;
   width: 100%;
   position: relative;
 }
 
-.background2{
+.background2 {
   height: 100%;
   width: 100%;
   position: relative;
 }
 
-.background3{
+.background3 {
   height: 100%;
   width: 100%;
   position: relative;
 }
 
-.background-blob::before{
+.background-blob::before {
   content: "";
   background-image: url("../images/background-blob.svg");
   background-size: contain;
@@ -1180,12 +1178,12 @@ ul.link_menu li a:hover {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  overflow:hidden;
+  overflow: hidden;
   z-index: 0;
   opacity: 25%;
 }
 
-.background2::before{
+.background2::before {
   content: "";
   background-image: url("../images/background2.svg");
   background-size: contain;
@@ -1195,11 +1193,11 @@ ul.link_menu li a:hover {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  overflow:hidden;
+  overflow: hidden;
   z-index: 0;
   opacity: 25%;
 }
-.background3::before{
+.background3::before {
   content: "";
   background-image: url("../images/background3.svg");
   background-size: contain;
@@ -1209,7 +1207,7 @@ ul.link_menu li a:hover {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  overflow:hidden;
+  overflow: hidden;
   z-index: 0;
   opacity: 25%;
 }
@@ -1223,6 +1221,30 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.contact-card {
+  flex: 0.3;
+  height: auto;
+  min-height: 30vh;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 24px;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 5vh;
+}
+
+.contact-image {
+  width: 100%;
+  vertical-align: middle;
+}
+.about-detail a {
+  color: #666666 !important;
 }
 
 @media screen and (max-width: 480px) {
