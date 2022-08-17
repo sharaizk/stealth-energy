@@ -831,18 +831,19 @@ button {
   border-top: inherit;
 }
 
-.main_form .contactus1 {
+.main_form .con-message {
   border: #02246a solid 1px;
   margin-bottom: 25px;
   width: 100%;
-  height: 47px;
+  height: 100px;
   background: transparent;
-  color: #dfdfdf;
+  color: #424242;
   font-size: 18px;
   font-weight: normal;
   border-right: inherit;
   border-left: inherit;
   border-top: inherit;
+  padding: 0;
 }
 
 .main_form .send_btn {
