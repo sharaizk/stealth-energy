@@ -430,6 +430,27 @@ button {
   transition: ease-in all 0.5s;
 }
 
+.text-li {
+  font-size: 1rem;
+  background-color: transparent;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  transition: ease-in all 0.5s;
+  margin-right: 10px;
+}
+
+.text-li-heading{
+  font-size: 1rem;
+  background-color: transparent;
+  color: #E4B701;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  transition: ease-in all 0.5s;
+  margin-right: 10px;
+}
 /** end banner section **/
 
 .titlepage {
@@ -1126,6 +1147,71 @@ ul.link_menu li a:hover {
 
 .medium {
   width: 50%;
+}
+.logo-title {
+  font-size: 0.8rem !important;
+}
+
+.background-blob{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.background2{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.background3{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.background-blob::before{
+  content: "";
+  background-image: url("../images/background-blob.svg");
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow:hidden;
+  z-index: 0;
+  opacity: 25%;
+}
+
+.background2::before{
+  content: "";
+  background-image: url("../images/background2.svg");
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow:hidden;
+  z-index: 0;
+  opacity: 25%;
+}
+.background3::before{
+  content: "";
+  background-image: url("../images/background3.svg");
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow:hidden;
+  z-index: 0;
+  opacity: 25%;
 }
 
 input::-webkit-outer-spin-button,
